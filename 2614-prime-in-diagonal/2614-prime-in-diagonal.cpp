@@ -12,9 +12,9 @@ public:
         int n =nums.size()-1;
         int evenmax = 0;
         for(int i=0;i<=n;i++){
-            if(isp(nums[i][i]))
+            if(isp(nums[i][i]) && evenmax<nums[i][i])
                 evenmax=max(evenmax,nums[i][i]);
-            if(isp(nums[i][n-i]))
+            if(isp(nums[i][n-i]) && evenmax<nums[i][n-i])
                 evenmax=max(evenmax,nums[i][n-i]);
         }
         return evenmax;
